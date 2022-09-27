@@ -1,0 +1,7 @@
+Tree Traversal
+    1. Pre-Order Traversal {Sorted}
+        -> Rule root->Left_Subtree -> Right_Subtree
+    2. Post-Order Traversal
+        -> Rule Left_SubTree->Right_SubTree -> Root
+    3. Inorder Traversal
+        => Left_Subtree -> root -> RightSubtree
