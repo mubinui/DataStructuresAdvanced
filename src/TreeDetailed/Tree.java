@@ -33,6 +33,32 @@ public class Tree {
             return treeFormer;
 
         }
+
+        public static void inorderTraversal (Node root){
+            if(root==null){
+                return;
+            }
+            inorderTraversal(root.left);
+            System.out.print(root.data+" ");
+            inorderTraversal(root.right);
+
+        }
+
+        public static void preorderTraversal(Node root){
+            if(root==null){
+                return;
+            }
+            System.out.print(root.data+" ");
+            preorderTraversal(root.left);
+            preorderTraversal(root.right);
+        }
+
+        public static void postorderTraversal(Node root){
+            if (root==null) return;
+            postorderTraversal(root.left);
+            postorderTraversal(root.right);
+            System.out.print(root.data+" ");
+        }
     }
 
 
@@ -41,6 +67,11 @@ public class Tree {
         BinaryTree tree = new BinaryTree();
         Node root = tree.buildTree(nodes);
         System.out.println(root.data);
+        tree.inorderTraversal(root);
+        System.out.println();
+        tree.preorderTraversal(root);
+        System.out.println();
+        tree.postorderTraversal(root);
 
 
     }
